@@ -229,7 +229,7 @@ BufferAttribute( array : TypedArray, itemSize : Integer, normalized : Boolean )
 * `itemSize ` -- the number of values of the array that should be associated with a particular vertex. For instance, if this attribute is storing a 3-component vector (such as a position, normal, or color), then itemSize should be 3. Here, it's just 1 random value per vertex so we use 1.
 * `normalized` -- (optional) Applies to integer data only. Indicates how the underlying data in the buffer maps to the values in the GLSL code. For instance, if array is an instance of UInt16Array, and normalized is true, the values 0 - +65535 in the array data will be mapped to 0.0f - +1.0f in the GLSL attribute. An Int16Array (signed) would map from -32768 - +32767 to -1.0f - +1.0f. If normalized is false, the values will be converted to floats unmodified, i.e. 32767 becomes 32767.0f. 
 
-[[[threejs.org - BufferAttribute]](https://threejs.org/docs/#api/en/core/BufferAttribute)]
+[[threejs.org - BufferAttribute]](https://threejs.org/docs/#api/en/core/BufferAttribute)
 
 * Add the custom attribute to the vertex shader:
 ```

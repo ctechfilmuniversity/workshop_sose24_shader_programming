@@ -9,7 +9,7 @@ has_children: false
 
 In this workshop, we are looking into **shader pipelines**, and **rendering a 3D scene** in a fragment shader.
 
-![shader_repetition.png](img/shader_repetition.png)
+![shader_repetition.png](./img/shader_repetition.png)
 
 ## Workshop Topics
 
