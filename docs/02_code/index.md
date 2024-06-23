@@ -35,3 +35,4 @@ For running the code examples:
 
 1. Wavy Start: [code](./01_wavy_start/wavy_start_code.zip)
 2. Wavy Pipeline: [steps](./02_wavy_pipeline/wavy_pipeline_steps.md), [code](./02_wavy_pipeline/wavy_pipeline_code.zip)
+3. Wavy Scene: [steps](./03_wavy/wavy_steps.md), [code](./03_wavy/wavy_steps_code.zip)
