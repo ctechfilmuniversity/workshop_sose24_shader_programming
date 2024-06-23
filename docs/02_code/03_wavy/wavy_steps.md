@@ -5,13 +5,13 @@ nav_exclude: true
 ---
 
 
-# A Basic Shader Pipeline with three.js
+# A Wavy Situation
 
 Tutorial is based on Brunos excellent tutorial three.js journey, specifically on [Lesson - Shader] (https://threejs-journey.com/lessons/shaders).
 
 We are going to create a mixture of different waves and make all values controllable by an user interface. The waves are based on sin curves and a Perlin turbulence noise.
 
-* [A Basic Shader Pipeline with three.js](#a-basic-shader-pipeline-with-threejs)
+* [A Wavy Situation](#a-wavy-situation)
     * [Big Waves](#big-waves)
         * [Hint](#hint)
     * [Colors](#colors)
