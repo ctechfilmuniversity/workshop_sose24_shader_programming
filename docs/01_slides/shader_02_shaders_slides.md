@@ -180,6 +180,8 @@ template:inverse
 
 ## Rasterization vs. Ray Tracing
 
+--
+
 .center[<img src="./img/rendering_comparison_02.png" alt="rendering_comparison_02.png" style="width:90%;"> .imgref[[pixelsham](http://www.pixelsham.com/2019/10/24/whats-the-difference-between-ray-tracing-and-rasterization/)]]
 
 
@@ -617,7 +619,9 @@ They have the advantage of running on the GPU in a parallel fashion and be very 
 ---
 .header[Shader Programming]
 
-## GPUGPU Computing
+## GPGPU Computing
+
+--
 
 * General Purpose GPU
     * Purposes beyond graphics processing
@@ -703,7 +707,6 @@ GLSL = Open **G**raphics **L**ibrary **S**hader **L**anguage
   
 * It executes on the GPU
 * Part of the OpenGL specification
-* Adapted for browsers as WebGL
 * C/C++ flavoured
 
 
@@ -730,8 +733,6 @@ GLSL = Open **G**raphics **L**ibrary **S**hader **L**anguage
 
 What’s missing from C in GLSL syntax:
 
---
-* No recursion => You must unroll recursive functions into loops
 
 --
 * No implicit casting => You must explicitly cast everything
@@ -741,6 +742,9 @@ What’s missing from C in GLSL syntax:
 
 --
 * No dynamic memory => All memory is static
+
+--
+* No recursion => You must unroll recursive functions into loops
 
 --
 * No pointers => Yay?
@@ -768,7 +772,7 @@ What’s missing from C in GLSL syntax:
 
 ## Versions Matter!
 
-OpenGL and GLSL are constantly evolving. It is crucial to be clear about the version you are using.  
+OpenGL and GLSL are constantly evolving. It is should to be clear about the version you are using.  
 
 
 > Check if your environment expects a specific version.
@@ -780,7 +784,7 @@ OpenGL and GLSL are constantly evolving. It is crucial to be clear about the ver
 
 **Current version: 4.6**
 
-E.g., not downward compatible additions
+E.g., not downward compatible additions:
 
 * 3.2 geometry shaders
 * 4.0 tessellation control and evaluation shaders
@@ -914,11 +918,14 @@ Vulkan targets high-performance real-time 3D-graphics applications and experienc
 
 ## Khronos Group Alternatives
 
+--
 Direct3D
 
 * Developed by Microsoft, part of the DirectX suite of APIs
 * Deep integration with Windows and Xbox platform
 * HLSL
+
+--
 
 Metal
 
@@ -938,7 +945,7 @@ template:inverse
 ---
 ## Shader Pipeline
 
-To my knowledge, most graphic environments give you access to 
+Many graphic environments give you access to 
 
 * Vertex shader
 * Fragment shader

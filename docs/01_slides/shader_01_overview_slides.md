@@ -40,14 +40,16 @@ layout: false
 It can be accessed
 
 --
-* with a given interface within a software and environment (Unreal, three.js)
+* with a given interface within a software and environment (e.g., Unreal, three.js)
 
 --
-* with custom code (C++ and OpenGL)
+* with custom code (e.g., C++ and OpenGL)
 
 
 ---
 ## The Workshop
+
+--
 
 Technology
 
@@ -325,7 +327,7 @@ With this workshop you gain
 * a theoretical understanding of rendering a 3D scene in a real-time context, 
 
 --
-* practical experiences with GLSL and shader programming.
+* practical experiences with GLSL, shader programming, and implementing a ray marched 3D scene.
 
 
 ---
