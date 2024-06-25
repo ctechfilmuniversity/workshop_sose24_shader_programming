@@ -29,7 +29,7 @@ For running the code examples:
 * Unzip the folder
 * With a terminal navigate into the folder 
 * Install the dependencies with `npm install`
-* Start a local server with `npm run div`
+* Start a local server with `npm run dev`
 
 ### Code
 

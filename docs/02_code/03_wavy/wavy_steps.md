@@ -167,7 +167,7 @@ varying float vWaves;
 
 ...
 
-float mix = (vElevation + uColorOffset) * uColorMultiplier;
+float mix = (vWaves + uColorOffset) * uColorMultiplier;
 vec3 color = mix(uDepthColor, uSurfaceColor, mix);
 
 gl_FragColor = vec4(color, 1.0);
