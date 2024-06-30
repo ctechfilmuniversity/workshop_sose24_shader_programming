@@ -14,6 +14,10 @@ In this section you find all code examples for the course.
         * [Setup](#setup)
         * [Run The Examples](#run-the-examples)
         * [Code](#code-1)
+    * [Day 2](#day-2)
+        * [Fragment Shader](#fragment-shader)
+        * [Implicit Geometry](#implicit-geometry)
+        * [Sphere Tracing](#sphere-tracing)
 
 
 ## Day 1
@@ -33,18 +37,19 @@ For running the code examples:
 
 ### Code
 
-Three.js:
-  
+
 1. Wavy Start: [code](./threejs/01_wavy_start/wavy_start_code.zip)
 2. Wavy Pipeline: [steps](./threejs/02_wavy_pipeline/wavy_pipeline_steps.md), [code](./threejs/02_wavy_pipeline/wavy_pipeline_code.zip)
 3. Wavy Scene: [steps](./threejs/03_wavy/wavy_steps.md), [code](./threejs/03_wavy/wavy_steps_code.zip)
+
+## Day 2
   
-Fragment Shader:
+### Fragment Shader
   
 1. Coordinate Transformation: [md](./fragmentshader/fragement_coordinates.md), [code](./fragmentshader/fragement_coordinates.frag)
 
   
-Implicit Geometry:
+### Implicit Geometry
   
 1. Circle: [md](./fragmentshader/implicit_geometry_01_circle.md), [code](./fragmentshader/implicit_geometry_01_circle.frag)
 2. Circle SDF: [md](./fragmentshader/implicit_geometry_02_circle_sdf.md), [code](./fragmentshader/implicit_geometry_02_circle_sdf.frag)
@@ -53,7 +58,7 @@ Implicit Geometry:
 5. Colored: [md](./fragmentshader/implicit_geometry_05_colored.md), [code](./fragmentshader/implicit_geometry_05_colored.frag)
   
 
-Sphere Tracing:
+### Sphere Tracing
   
 1. Sphere Tracing Puzzling, no Shading: [pieces](./fragmentshader/spheretracing_01_no_shading_inpieces.md), [code solution](spheretracing_01_no_shading.frag)
 2. Sphere Tracing with Shading:[steps](./fragmentshader/spheretracing_02_diffuse_shading_steps.md) (start with [code](./fragmentshader/spheretracing_01_no_shading.frag)), [code solution](./fragmentshader/spheretracing_03_diffuse_shading.frag)
