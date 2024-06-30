@@ -8,7 +8,7 @@ class: center, middle, inverse
 #### Prof. Dr. Lena Gieseke | l.gieseke@filmuniversitaet.de  
 #### Film University Babelsberg KONRAD WOLF
 
-## *The Fragment Shader*
+## *Overview 2*
 
 
 <!--
@@ -29,6 +29,24 @@ t: Reset presentation timer
 
 ---
 layout:false
+
+## The Workshop
+
+
+Technology
+
+
+* Shader pipeline ✓
+* Example three.js ✓
+* Fragment shader 
+* Example Unreal
+
+Scenario
+
+* Rendering a 3D scene in in a fragment shader
+
+
+---
 
 ## Fragment Shader
 
@@ -53,17 +71,15 @@ We are building the whole scene within the fragments shader itself, including th
 
 ...nothing!
 
----
-.header[Fragment Shader]
-## Rendering a 3D Scene
 
 --
 
-> How?
+> How to render a 3D Scene?
 
 --
 
-We use *implicit geometry* descriptions and *sphere tracing* as rendering algorithm.
+* Implicit geometry descriptions 
+* Sphere tracing as rendering algorithm
 
 
 ---
@@ -93,17 +109,10 @@ We use *implicit geometry* descriptions and *sphere tracing* as rendering algori
 
 ## The Fragment Shader
 
---
-
 .center[<img src="../img/pipeline_frag_01.png" alt="pipeline_frag_01" style="width:100%;">]
 
---
 * Automatically runs once per rasterization fragment (think of this as a pixel)
-
---
 * Has access to certain attributes provided by the GPU and vertex shader
-
---
 * Must output a final pixel color
 
 ---
@@ -134,10 +143,6 @@ Many frameworks, such as *ShaderToy*, solely focus on fragment shaders.
 
 .center[<img src="../img/pipeline_frag_02.png" alt="pipeline_frag_02" style="width:100%;">]
 
----
-template:inverse
-
-# Development Environments
 
 ---
 .header[Shader Programming]
@@ -145,50 +150,30 @@ template:inverse
 ## Development Environments
 
 --
-* Greatly differ!
-
-???
-.task[COMMENT:]  
-
-* Differ in details and you can not transfer code from one to the other without adjustments
-
---
-* Required adjustments range from renaming variables to access to different shaders
-
-
-???
-.task[COMMENT:]  
-
-* which might make a transfer simply impossible.
-* https://www.shadertoy.com/
-* https://www.shaderoo.org/?cmd=browse
-* 
-
----
-.header[Shader Programming]
-
-## Shader Development Frameworks
-
-
 * [glsl-canvas](https://marketplace.visualstudio.com/items?itemName=circledev.glsl-canvas) in VS Code
     * [glslCanvas](https://github.com/patriciogonzalezvivo/glslCanvas)
     * From the [Book of Shaders](https://thebookofshaders.com/)
 --
 * [Shadertoy](https://www.shadertoy.com/)
 
---
-    * Countless examples with a great variety
-    * Author expertise range from noobs to the master of the shader universe
-    * Usually somewhat quality checked by the community
+
+???
+.task[COMMENT:]  
+
+* Countless examples with a great variety
+* Author expertise range from noobs to the master of the shader universe
+* Usually somewhat quality checked by the community
+
 --
 * Your own environment
+    * Empty three.js scene
     * Full control
-    * three,js, C++, Java, Javascript (with WebGL)
+    * C++, Java, Javascript (with WebGL) etc.
 
----
-.header[Shader Programming]
 
-## Shader Development Frameworks
+???
+.task[COMMENT:]  
+
 
 > Know for what you are going to use the shader for and work in the most suitable environment.
   
@@ -203,7 +188,6 @@ template: inverse
 
 ## Basic Setup
 
---
 * Let's work with [glsl-canvas](https://marketplace.visualstudio.com/items?itemName=circledev.glsl-canvas) in Visual Studio Code
 
 --
