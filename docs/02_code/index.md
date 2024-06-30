@@ -13,8 +13,9 @@ In this section you find all code examples for the course.
     * [Day 1](#day-1)
         * [Setup](#setup)
         * [Run The Examples](#run-the-examples)
-        * [Code](#code-1)
+        * [three.js](#threejs)
     * [Day 2](#day-2)
+        * [Setup](#setup-1)
         * [Fragment Shader](#fragment-shader)
         * [Implicit Geometry](#implicit-geometry)
         * [Sphere Tracing](#sphere-tracing)
@@ -35,8 +36,7 @@ For running the code examples:
 * Install the dependencies with `npm install`
 * Start a local server with `npm run dev`
 
-### Code
-
+### three.js
 
 1. Wavy Start: [code](./threejs/01_wavy_start/wavy_start_code.zip)
 2. Wavy Pipeline: [steps](./threejs/02_wavy_pipeline/wavy_pipeline_steps.md), [code](./threejs/02_wavy_pipeline/wavy_pipeline_code.zip)
@@ -44,6 +44,10 @@ For running the code examples:
 
 ## Day 2
   
+### Setup
+
+For working with the code, today we simply use [glsl-canvas](https://marketplace.visualstudio.com/items?itemName=circledev.glsl-canvas). 
+
 ### Fragment Shader
   
 1. Coordinate Transformation: [md](./fragmentshader/fragement_coordinates.md), [code](./fragmentshader/fragement_coordinates.frag)
@@ -60,9 +64,9 @@ For running the code examples:
 
 ### Sphere Tracing
   
-1. Sphere Tracing Puzzling, no Shading: [pieces](./fragmentshader/spheretracing_01_no_shading_inpieces.md), [code solution](spheretracing_01_no_shading.frag)
-2. Sphere Tracing with Shading:[steps](./fragmentshader/spheretracing_02_diffuse_shading_steps.md) (start with [code](./fragmentshader/spheretracing_01_no_shading.frag)), [code solution](./fragmentshader/spheretracing_03_diffuse_shading.frag)
-3. Sphere Tracing for Blobs: [md](./fragmentshader/spheretracing_04_diffuse_shading_blobs.md), [code](./fragmentshader/spheretracing_04_diffuse_shading_blobs.frag))
+1. Sphere Tracing Puzzling, no Shading: [pieces](./fragmentshader/spheretracing_01_no_shading_inpieces.md), [code solution](./fragmentshader/spheretracing_01_no_shading.frag)
+2. Sphere Tracing with Shading: [steps](./fragmentshader/spheretracing_02_diffuse_shading_steps.md) (start with this [code](./fragmentshader/spheretracing_01_no_shading.frag)), [code solution](./fragmentshader/spheretracing_03_diffuse_shading.frag)
+3. Sphere Tracing for Blobs: [md](./fragmentshader/spheretracing_04_diffuse_shading_blobs.md), [code](./fragmentshader/spheretracing_04_diffuse_shading_blobs.frag)
 
 
 <!-- 

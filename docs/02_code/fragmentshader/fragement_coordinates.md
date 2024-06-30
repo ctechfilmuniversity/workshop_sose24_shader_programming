@@ -26,7 +26,7 @@ void main()
 
     // Both axis run from 0..1 with
     // the origin
-    p /= u_resolution.xy;
+    //p /= u_resolution.xy;
 
     // We want a coordinate system that runs
     // from -1..1 in y with the 0,0 
@@ -34,9 +34,9 @@ void main()
     // The range from x depends on the range
     // of y
 
-    // p *= 2.0;
-    // p -= u_resolution.xy;
-    // p /= u_resolution.y;
+    p *= 2.0;
+    p -= u_resolution.xy;
+    p /= u_resolution.y;
     // For running between -0.5..0.5
     // p *= 0.5;
 

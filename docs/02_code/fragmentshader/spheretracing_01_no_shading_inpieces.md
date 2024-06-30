@@ -172,10 +172,11 @@ float sdfScene(vec3 point_on_ray)
 
 }
 ```
-
+  
 ```glsl
 // Plane 
 // (moved down by 0.5 - don't worry
 // about this translation just yet, we
 // will cover it in detail next week)
 distance_to_scene = min(distance_to_scene, point_on_ray.y + 0.5); // Axis aligned
+```
