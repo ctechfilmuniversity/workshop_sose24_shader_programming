@@ -31,12 +31,12 @@ void main()
     p *= 2.0;
     p -= u_resolution.xy;
     p /= u_resolution.y;
-    // For running between -0.5..0.5
-    p *= 0.5;
+    // For running between -0.5..0.5 if you prefer that
+    // p *= 0.5;
 
-    gl_FragColor = vec4(vec3(abs(p.x)), 1.0);
+    // gl_FragColor = vec4(vec3(abs(p.x)), 1.0);
     // gl_FragColor = vec4(vec3(abs(p.y)), 1.0);
-    //  gl_FragColor = vec4(vec3(abs(p.x*p.y)), 1.0);
+     gl_FragColor = vec4(vec3(abs(p.x*p.y)), 1.0);
 
     // Putting all together
     // p = (2.0 * gl_FragCoord.xy - u_resolution.xy) / u_resolution.y;
