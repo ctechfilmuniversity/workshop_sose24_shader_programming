@@ -225,7 +225,7 @@ void main() {
 ## Uniforms glsl-canvas 
 
 
-| Type                    | Property                         |
+| Type                    | Property        |
 |-------------------------|-----------------|
 | `vec2`                  | u_resolution    |
 | `float`                 | u_time          |
