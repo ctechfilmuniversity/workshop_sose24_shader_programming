@@ -1222,6 +1222,6 @@ template:inverse
 ---
 ## Exercise
 
-1. Implement a sphere tracer based on the given code pieces in [spheretracing_06_no_shading_inpieces.md](../code/spheretracing_06_no_shading_inpieces.md)
+1. Implement a sphere tracer based on the given code pieces in [spheretracing_01_no_shading_inpieces.md](../02_code/fragmentshader/spheretracing_01_no_shading_inpieces.md)
 
 

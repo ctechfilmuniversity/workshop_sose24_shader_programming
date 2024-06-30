@@ -873,7 +873,6 @@ template:inverse
 ---
 ## Exercise
 
-
-2. Follow the steps in [spheretracing_07_diffuse_shading_steps.md](../code/spheretracing_07_diffuse_shading_steps.md) to implement diffuse shading in the scene.
-3. Explore!
+1. Follow the steps in [spheretracing_03_diffuse_shading_steps.md](../02_code/fragmentshader/spheretracing_02_diffuse_shading_steps.md) to implement diffuse shading in the scene.
+2. Explore!
 

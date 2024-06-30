@@ -1039,6 +1039,10 @@ template:inverse
 --
 1. Create a 2D scene that is animated and / or interactive. Feel free to look up further [2D SDF Functions](https://iquilezles.org/articles/distfunctions2d/).
 
---
+
+
+???
+.task[COMMENT:]  
+
 2. Try to understand scene [`implicit_geometry_05_colored.frag`](https://ctechfilmuniversity.github.io/workshop_shader_programming/code/implicit_geometry_05_colored.html) as much as you can.
 
