@@ -219,10 +219,10 @@ void main()
     // C. Diffuse Shading
     // If we didn't hit anything,
     // set background color and stop.
-    vec3 overlay = 0.8 + cos(u_time * 0.2 + p.xyx * 0.01 +vec3(0,2,4));
+    vec3 overlay = 0.5 + 0.5 * cos(u_time * 0.2 + p.xyx * 0.01 +vec3(0,2,4));
     if(distance_to_scene > DISTANCE_MAX)
     {
-        fragColor = vec4(overlay * 0.7, 1.0);
+        fragColor = vec4(overlay * 0.9, 1.0);
         return;
     }
     // Get the point on the surface that

@@ -26,6 +26,7 @@ float sdfScene(vec3 point_on_ray)
     // in the scene and keep the smallest distance
     float distance_to_scene = 1e20;
 
+    // Scene
     // In this specific scene, we only have
     // one sphere and a plane
 
