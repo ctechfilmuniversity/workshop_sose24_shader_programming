@@ -19,6 +19,8 @@ In this section you find all code examples for the course.
         * [Fragment Shader](#fragment-shader)
         * [Implicit Geometry](#implicit-geometry)
         * [Sphere Tracing](#sphere-tracing)
+    * [Day 3](#day-3)
+        * [Scene Setup](#scene-setup)
 
 
 ## Day 1
@@ -69,15 +71,14 @@ For working with the code, today we simply use [glsl-canvas](https://marketplace
 3. Sphere Tracing for Blobs: [md](./fragmentshader/spheretracing_04_diffuse_shading_blobs.md), [code](./fragmentshader/spheretracing_04_diffuse_shading_blobs.frag)
 
 
-<!-- 
+## Day 3
+  
+### Scene Setup
 
-Sphere Tracing:
 
-
-9. [spheretracing_09_transformations.frag](spheretracing_09_transformations.md) ([source](spheretracing_09_transformations.frag))
-10. [spheretracing_10_csg.frag](spheretracing_10_csg.md) ([source](spheretracing_10_csg.frag))
-11. [spheretracing_11_repetition_steps.md](spheretracing_11_repetition.md) ([source solution](spheretracing_11_repetition.frag))
-* [spheretracing_12_heart.frag](spheretracing_12_heart.md) ([source](spheretracing_12_heart.frag))
-* [spheretracing_13_biomine.frag](spheretracing_13_biomine.md) ([source](spheretracing_13_biomine.frag)) 
-* 
-* -->
+1. Transformations: [md](./fragmentshader/scenesetup_01_transformations.md), [code](./fragmentshader/scenesetup_01_transformations.frag)
+2. Constructive Solid Geometry: [md](./fragmentshader/scenesetup_02_csg.md), [code](./fragmentshader/scenesetup_02_csg.frag)
+    *  Super Sampling: [code](./fragmentshader/scenesetup_02_csg_supersampling.frag)
+3. Repetition: [steps](./fragmentshader/scenesetup_03_repetition.md), [code solution](./fragmentshader/scenesetup_03_repetition.frag)
+4. Heart: [md](./fragmentshader/scenesetup_04_heart.md), [code](./fragmentshader/scenesetup_04_heart.frag)
+5. Biomine: [md](./fragmentshader/scenesetup_05_biomine.md), [code](./fragmentshader/scenesetup_05_biomine.frag)

@@ -8,8 +8,9 @@ uniform float u_time;
 
 out vec4 fragColor;
 
+
 // For the sphere tracing
-#define STEPS_MAX 100
+#define STEPS_MAX 500
 #define DISTANCE_MAX 100.
 #define DISTANCE_MIN .01
 
@@ -20,9 +21,59 @@ out vec4 fragColor;
 // (the h from the forumla)
 #define EPSILON 0.0001
 
-// For the fog
-#define FAR 30.
 
+
+// Rotation matrix around the X
+mat3 rotateX(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+    return mat3(
+        vec3(1, 0, 0),
+        vec3(0, c, -s),
+        vec3(0, s, c)
+    );
+}
+
+// Rotation matrix around the Y 
+mat3 rotateY(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+    return mat3(
+        vec3(c, 0, s),
+        vec3(0, 1, 0),
+        vec3(-s, 0, c)
+    );
+}
+
+// Rotation matrix around the Z
+mat3 rotateZ(float theta) 
+{
+    float c = cos(theta);
+    float s = sin(theta);
+    return mat3(
+        vec3(c, -s, 0),
+        vec3(s, c, 0),
+        vec3(0, 0, 1)
+    );
+}
+
+
+mat4 rotation3d(vec3 axis, float angle) {
+// https://github.com/dmnsgn/glsl-rotate/blob/main/rotation-3d.glsl
+    axis = normalize(axis);
+    float s = sin(angle);
+    float c = cos(angle);
+    float oc = 1.0 - c;
+
+    return mat4(
+        oc * axis.x * axis.x + c,           oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s,  0.0,
+        oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c,           oc * axis.y * axis.z - axis.x * s,  0.0,
+        oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c,           0.0,
+        0.0,                                0.0,                                0.0,                                1.0
+    );
+}
 
 // Signed distance function between
 // point and sphere
@@ -31,15 +82,16 @@ float sdfSphere(vec3 point_on_ray, float radius)
     return length(point_on_ray) - radius;
 }
 
-float sdfCube(vec3 point_on_ray, vec3 size)
+float sdfRectangle(vec3 p, vec3 size)
 {
-    return length(max(abs(point_on_ray) - size, 0.));
+    vec3 d = abs(p) - size;
+    return length(max(d,0.0)) + min(max(d.x, max(d.y, d.z)),0.0);
 }
 
-float smin(float a, float b, float k)
+float sdOctahedron( vec3 p, float s)
 {
-    float h = max(k - abs(a - b), 0.0) / k;
-    return min(a, b) - h * h * k * (1.0 / 4.0);
+  p = abs(p);
+  return (p.x+p.y+p.z-s)*0.57735027;
 }
 
 
@@ -52,76 +104,72 @@ float sdfScene(vec3 point_on_ray)
     // in the scene and keep the smallest distance
     float distance_to_scene = 1e20;
 
-    // In this specific scene, we only have
-    // one sphere and a plane
+    // Plane 
+    distance_to_scene = min(distance_to_scene, point_on_ray.y + 0.5); // Axis aligned
 
-    // Spheres (at the origin)
-    // distance_to_scene = min(distance_to_scene, sdfSphere(point_on_ray, 0.5));
-    float circle1 = sdfSphere(point_on_ray - vec3(0.5* sin(u_time), 0.0, 0.5 * cos(u_time)), 0.2);
-    float circle2 = sdfSphere(point_on_ray - vec3(.2) + vec3(0.2 * sin(u_time)), 0.4);
-    float circle3 = sdfSphere(point_on_ray - vec3(0.5 * sin(u_time), 0.5 * cos(u_time * 1.1), 0.5 * cos(u_time)), 0.5);
+    // Spheres
+    distance_to_scene = min(distance_to_scene, sdfSphere(point_on_ray, 0.5));
+    distance_to_scene = min(distance_to_scene, sdfSphere(point_on_ray - vec3(3, 1.5, 6), 2.0));
 
-    vec3 pos_adjust = vec3(-.5, -1., 1.);
-    float time  = u_time * 0.5;
-    float s1 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(cos(time*.1), cos(time*.3),cos(time*.5)), 1.);
-    float s2 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(cos(time*.7), 1.+cos(time*.7),cos(time*.3)), 1.);
-    float s3 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(cos(time*.2), 1.5+cos(time*.5),sin(time*.6)), .5);
-    float s4 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(sin(time*.3), 1.5+sin(time*1.6),sin(time*0.8)), .4);
-    float s5 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(sin(time*.6), 1.5+sin(time*.9),sin(time*.9)), 1.2);
-    float s6 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(1.5+sin(time*.3), cos(time*1.5),sin(time*0.8)), .4);
-    float s7 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(cos(time*.3), 1.5 + sin(time*1.5),1.5+ sin(time*0.8)), .4);
-    float s8 = sdfSphere(point_on_ray + pos_adjust 
-                            * vec3(1.5 + cos(time*3.), sin(time*.5),sin(time*0.8)), .4);
+    // Cube
+    // distance_to_scene = min(distance_to_scene, sdfRectangle(point_on_ray - vec3(-2, 0.5, 3), vec3(1)));
+    // Animated Rotate around Y
+    // Option 1
+    // mat3 transform = rotateY(u_time);
+    // distance_to_scene = min(distance_to_scene, sdfRectangle(transform * (point_on_ray - vec3(-2, 0.5, 3)), vec3(1)));
+    // Option 2
+    // mat4 transform = rotation3d(vec3(1., 1., 0.), u_time);
+    // vec4 p = vec4(point_on_ray - vec3(-2, 1., 3), 1.);
+    // vec3 p2 = vec3((transform * p).xyz);
+    // distance_to_scene = min(distance_to_scene, sdfRectangle(p2, vec3(1)));
+    // Animated Complex
+    distance_to_scene = min(distance_to_scene, sdfRectangle(
+                                                rotateY(u_time) * 
+                                                (point_on_ray - vec3(-2, max(0.5, 0.5 + sin(u_time)), 3)),
+                                                 vec3(1)));
+
+    // Octahedron Animated
+    distance_to_scene = min(distance_to_scene, sdOctahedron(rotateX(u_time) * rotateY(u_time * 0.5) *(point_on_ray - vec3(1, -0.15, 0.5)), 0.3));
 
 
-    float merge = 0.3;
-    distance_to_scene = min(distance_to_scene, s1);
-    distance_to_scene = smin(distance_to_scene, s2, merge);
-    distance_to_scene = smin(distance_to_scene, s3, merge);
-    distance_to_scene = smin(distance_to_scene, s4, merge);
-    distance_to_scene = smin(distance_to_scene, s5, merge);
-    distance_to_scene = smin(distance_to_scene, s6, merge);
-    distance_to_scene = smin(distance_to_scene, s7, merge);
-    distance_to_scene = smin(distance_to_scene, s8, merge);
+    // Twisting
+    // float k =  sin(u_time) * 3.0; 
+    // float c = cos(k * point_on_ray.y);
+    // float s = sin(k * point_on_ray.y);
+    // mat2  m = mat2(c, -s, s, c);
+    // vec3  q = vec3(m * (point_on_ray.xz - vec2(2.5,0.2)), point_on_ray.y);
+    // distance_to_scene = min(distance_to_scene, sdfRectangle(q, vec3(0.6)));
 
-    // distance_to_scene = max(distance_to_scene, -1.*s6);
-    // distance_to_scene = max(distance_to_scene, -1.*s7);
-    // distance_to_scene = max(distance_to_scene, -1.*s8);
-
-    // Plane
-    distance_to_scene = min(distance_to_scene, point_on_ray.y + 2.); // Axis aligned
 
     return distance_to_scene;
 }
 
-
+// Slightly updated version
 float sphereTracing(vec3 ray_origin, vec3 ray_direction)
 {
     float distance_to_scene = 0.;
+    float point_on_ray_next = 0.;
 
+    float t = 0.0, h;
     for(int i=0; i < STEPS_MAX; i++)
     {
         // We move along the ray 
         // the last distance_to_scene amount
-        vec3 point_on_ray = ray_origin + ray_direction * distance_to_scene;
+        vec3 point_on_ray = ray_origin + ray_direction * point_on_ray_next;
 
         // Compute the new distance to scene
         // from the just computed point on the 
         // camera ray
-        distance_to_scene += sdfScene(point_on_ray);
+        distance_to_scene = sdfScene(point_on_ray);
 
         // Did we overshoot or have a hit with the scene?
         if(distance_to_scene > DISTANCE_MAX || distance_to_scene < DISTANCE_MIN) break;
+
+        point_on_ray_next +=  distance_to_scene * .5;
     }
 
-    return distance_to_scene;
+    // return min(point_on_ray_next, DISTANCE_MAX);
+    return point_on_ray_next;
 }
 
 // Computing the normal for
@@ -150,8 +198,9 @@ vec3 getDiffuseShading(vec3 point_on_surface)
 {
     // The Light
     // Light position
-    vec3 light_position = vec3(8, 10, -10);
-    // light_position.xz += vec2(sin(0.5* u_time), 1.) * 2.;
+    // vec3 light_position = vec3(2, 8, 0);
+    vec3 light_position = vec3(2, 5, -4);
+    // light_position.xz += vec2(sin(u_time), cos(u_time)) * 6.;
 
     // Light direction
     vec3 light_direction_to_point = normalize(light_position - point_on_surface);
@@ -160,12 +209,12 @@ vec3 getDiffuseShading(vec3 point_on_surface)
     vec3 surface_normal = estimateNormal(point_on_surface);
     
     // The reflection behavior
-    vec3 color_material = vec3(0.5, 0.5, 0.5);
+    vec3 color_material = vec3(0.8, 0.8, 0.8);
     float reflection_diffuse = max(dot(surface_normal, light_direction_to_point), 0.);
 
     // Ambient Light
     // To lighten up everything a bit
-    vec3 color_ambient = vec3(0.01, 0.01, 0.01);
+    vec3 color_ambient = vec3(0.06, 0.1, 0.2);
 
     // The shadow
     // We need to make sure that we are not stuck inside of the shape
@@ -207,7 +256,7 @@ void main()
 
     // The Camera
     // Camera position
-    vec3 ray_origin = vec3(0, 1., -5);
+    vec3 ray_origin = vec3(0, 0, -2);
 
     // Camera direction
     // Shooting a ray "through" the current fragment
@@ -215,16 +264,13 @@ void main()
 
 
     float distance_to_scene = sphereTracing(ray_origin, ray_direction);
-    float d = smoothstep(0., .5, distance_to_scene);
 
-   
     // C. Diffuse Shading
     // If we didn't hit anything,
     // set background color and stop.
-    vec3 overlay = 0.5 + 0.5 * cos(u_time * 0.2 + p.xyx * 0.01 +vec3(0,2,4));
     if(distance_to_scene > DISTANCE_MAX)
     {
-        fragColor = vec4(overlay * 0.9, 1.0);
+        fragColor = vec4(0.65, 0.75, 0.9, 1.0);
         return;
     }
     // Get the point on the surface that
@@ -237,9 +283,6 @@ void main()
     // Compute the lambert shading
     color = getDiffuseShading(point_on_surface);
 
-    color = overlay + color;
-
 
     fragColor = vec4(color, 1.0);
-    // fragColor = vec4(overlay, 1.0);
 }

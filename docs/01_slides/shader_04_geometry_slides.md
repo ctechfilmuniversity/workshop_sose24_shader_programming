@@ -347,8 +347,8 @@ This is *explicit* as you have explicit parameters.
 .left-even[
 The good
 * Much more compact
-* More convenient to control by editing control points
-* Easy to construct from control points
+* More convenient to control by editing parameters
+* Easy to construct from parameters
 ]
 
 --
@@ -356,7 +356,7 @@ The good
 .right-even[
 The bad 
 * Work well for smooth surfaces
-* Must still split surfaces into discrete number of patches
+* Often must still split surfaces into discrete number of patches
 * Rendering times are higher than for polygons
 * Intersection test? Inside/outside test?
 ]
@@ -531,7 +531,7 @@ float sphere(vec2 p, float r)
   
 Solving for  
 
-$x^2+y^2+z^2 − r=0$
+$x^2+y^2 − r=0$
 
 --
 
@@ -741,7 +741,7 @@ You can easily combine functions to create **composite shapes**.
 <br >
 Union
 
-* the minimum values of all computed distance functions
+* the minimum value of all computed distance functions
 ]
 
 
@@ -795,7 +795,7 @@ void main()
 .right-even[
 
 <br >
-Intersection
+Subtraction
 
 * the max of two distances and multiplying that to the original value
 ]
@@ -848,7 +848,7 @@ At some point, I had accidentally put a `+`... with an interesting result:
 ...
     // Intersection
     float d = min(circle1, circle2);
-    d *= max(d, circle3);
+    d += max(d, circle3);
 ...
 ```
 ]
@@ -962,6 +962,12 @@ Making it interactive (the smaller circle is controlled by the mouse)
 .right-even[
 > Don't forget to normalize the mouse position as well!
 ]
+
+
+???
+.task[COMMENT:]  
+
+* Show code examples: interactive, blobs
 
 
 ---
