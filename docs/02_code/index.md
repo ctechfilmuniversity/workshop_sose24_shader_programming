@@ -21,6 +21,7 @@ In this section you find all code examples for the course.
         * [Sphere Tracing](#sphere-tracing)
     * [Day 3](#day-3)
         * [Scene Setup](#scene-setup)
+        * [Three.js](#threejs-1)
 
 
 ## Day 1
@@ -75,10 +76,13 @@ For working with the code, today we simply use [glsl-canvas](https://marketplace
   
 ### Scene Setup
 
-
 1. Transformations: [md](./fragmentshader/scenesetup_01_transformations.md), [code](./fragmentshader/scenesetup_01_transformations.frag)
 2. Constructive Solid Geometry: [md](./fragmentshader/scenesetup_02_csg.md), [code](./fragmentshader/scenesetup_02_csg.frag)
     *  Super Sampling: [code](./fragmentshader/scenesetup_02_csg_supersampling.frag)
 3. Repetition: [steps](./fragmentshader/scenesetup_03_repetition.md), [code solution](./fragmentshader/scenesetup_03_repetition.frag)
 4. Heart: [md](./fragmentshader/scenesetup_04_heart.md), [code](./fragmentshader/scenesetup_04_heart.frag)
 5. Biomine: [md](./fragmentshader/scenesetup_05_biomine.md), [code](./fragmentshader/scenesetup_05_biomine.frag)
+
+### Three.js
+
+1. Fragment Shader to three.js: [code](./threejs/04_uvs/uvs_code.zip)
