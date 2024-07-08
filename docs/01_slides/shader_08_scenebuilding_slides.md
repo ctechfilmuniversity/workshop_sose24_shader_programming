@@ -704,7 +704,7 @@ With *function design* we can obtain various effects:
 
 * Infinite repetition
 * Bending ([1](https://www.shadertoy.com/view/Wlt3DM), [2](https://www.shadertoy.com/view/3llfRl), [3](https://www.shadertoy.com/view/WldGWM), [4](https://www.shadertoy.com/view/WltcRH))
-* Displacements([1](https://www.shadertoy.com/view/MstXWS), [2](https://www.shadertoy.com/view/Ws3XWl))
+* Displacements ([1](https://www.shadertoy.com/view/MstXWS), [2](https://www.shadertoy.com/view/Ws3XWl))
 ]
 
 ---
@@ -715,8 +715,8 @@ With *function design* we can obtain various effects:
 
 * Infinite repetition
 * Bending ([1](https://www.shadertoy.com/view/Wlt3DM), [2](https://www.shadertoy.com/view/3llfRl), [3](https://www.shadertoy.com/view/WldGWM), [4](https://www.shadertoy.com/view/WltcRH))
-* Displacements([1](https://www.shadertoy.com/view/MstXWS), [2](https://www.shadertoy.com/view/Ws3XWl))
-* Morphing / Interpolation([1](https://www.shadertoy.com/view/3sycDm), [2](https://www.shadertoy.com/view/MslSDN))
+* Displacements ([1](https://www.shadertoy.com/view/MstXWS), [2](https://www.shadertoy.com/view/Ws3XWl))
+* Morphing / Interpolation ([1](https://www.shadertoy.com/view/3sycDm), [2](https://www.shadertoy.com/view/MslSDN))
 ]
 
 ---
@@ -729,11 +729,25 @@ With *function design* we can obtain various effects:
 * Bending ([1](https://www.shadertoy.com/view/Wlt3DM), [2](https://www.shadertoy.com/view/3llfRl), [3](https://www.shadertoy.com/view/WldGWM), [4](https://www.shadertoy.com/view/WltcRH))
 * Displacements([1](https://www.shadertoy.com/view/MstXWS), [2](https://www.shadertoy.com/view/Ws3XWl))
 * Morphing / Interpolation ([1](https://www.shadertoy.com/view/3sycDm), [2](https://www.shadertoy.com/view/MslSDN))
-* Twists([1](https://www.shadertoy.com/view/MlcGRf), [2](https://www.shadertoy.com/view/4tc3WB), [3](https://www.shadertoy.com/view/4ts3WN), [4](https://www.shadertoy.com/view/4dX3Rn), [5](https://www.shadertoy.com/view/4lGyW1))
+* Twists ([1](https://www.shadertoy.com/view/MlcGRf), [2](https://www.shadertoy.com/view/4tc3WB), [3](https://www.shadertoy.com/view/4ts3WN), [4](https://www.shadertoy.com/view/4dX3Rn), [5](https://www.shadertoy.com/view/4lGyW1))
 ]
 
 .right-even[<img src="../img/twisting_01.png" alt="twisting_01" style="width:100%;">  .imgref[[[tdhooper]](https://www.shadertoy.com/view/Mtc3RX)]]
 
+---
+template:inverse
+
+### Further Effects
+
+# Repetition
+
+---
+.header[Further Effects]
+
+## Repetition Example
+
+* Start with your last version or with file `spheretracing_03_diffuse_shading.frag`
+* The code to be added can be found in `scenesetup_03_repetition_steps.md`
 
 
 ---
@@ -755,6 +769,8 @@ distance_to_scene = sdfSphere(point_on_ray, 0.15);
 ???
 .task[COMMENT:]  
 
+* 
+* Start with the last scene
 * Also show `mod`
 
 ```glsl
@@ -1208,8 +1224,9 @@ Show CSG example with aa
 A bit more elegantly and controllable: [Raymarching - Primitives](https://www.shadertoy.com/view/Xds3zN)
 
 ---
+## More Examples
 
-.center[<video autoplay loop width="680"><source src="../img/preview_05.webm"type="video/webm"></video>]
+.center[<video autoplay loop width="580"><source src="../img/preview_05.webm"type="video/webm"></video>]
 
 ---
 template:inverse
@@ -1225,10 +1242,11 @@ template:inverse
 We are reaching our GPU's limits.   
 
 ***It is time to care about how to make the algorithms faster!***
-
+  
 --
-
-See: [GLSL Optimizations](https://www.khronos.org/opengl/wiki/GLSL_Optimizations)
+  
+<br >
+E.g., [GLSL Optimizations](https://www.khronos.org/opengl/wiki/GLSL_Optimizations)
 
 
 ???

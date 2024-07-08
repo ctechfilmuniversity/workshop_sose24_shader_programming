@@ -78,6 +78,9 @@ Rendering a 3D scene in in a fragment shader
 * 3D Scene Rendering ✓
 * Sphere Tracing + Implementation Example ✓
 * Simple Shading ✓
+
+--
+
 * Simple Shading Implementation Example
 
 --
@@ -95,7 +98,7 @@ Rendering a 3D scene in in a fragment shader
 .center[<img src="../img/preview_01.png" alt="preview_01" style="width:45%;">]
 
 ---
-## Re-Cap
+## Preview
 
 .center[<video autoplay loop width="500"><source src="../img/preview_02.webm"type="video/webm"></video>]
 
