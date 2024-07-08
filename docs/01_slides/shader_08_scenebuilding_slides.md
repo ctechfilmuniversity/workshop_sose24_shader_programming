@@ -109,21 +109,21 @@ Let's say we want to move up a sphere:
 
 --
 
-.center[<img src="../img/translation_01.png" alt="translation_01" style="width:100%;">]
+.center[<img src="./img/translation_01.png" alt="translation_01" style="width:100%;">]
 
 ---
 ## Transformations
 
 Let's say we want to move up a sphere:
 
-.center[<img src="../img/translation_02.png" alt="translation_02" style="width:100%;">]
+.center[<img src="./img/translation_02.png" alt="translation_02" style="width:100%;">]
 
 ---
 ## Transformations
 
 Let's say we want to move up a sphere:
 
-.center[<img src="../img/translation_03.png" alt="translation_03" style="width:100%;">]
+.center[<img src="./img/translation_03.png" alt="translation_03" style="width:100%;">]
 
 ---
 ## Transformations
@@ -132,23 +132,23 @@ Within the sphere tracing algorithm, we need to move the point on the ray we are
 
 --
 
-.center[<img src="../img/translation_04.png" alt="translation_04" style="width:70%;">]
+.center[<img src="./img/translation_04.png" alt="translation_04" style="width:70%;">]
 
 ---
 ## Transformations
 
-.center[<img src="../img/translation_05.png" alt="translation_05" style="width:80%;">]
+.center[<img src="./img/translation_05.png" alt="translation_05" style="width:80%;">]
 
 ---
 ## Transformations
 
-.center[<img src="../img/translation_06.png" alt="translation_06" style="width:80%;">]
+.center[<img src="./img/translation_06.png" alt="translation_06" style="width:80%;">]
 
 
 ---
 ## Transformations
 
-.center[<img src="../img/translation_06.png" alt="translation_06" style="width:50%;">]
+.center[<img src="./img/translation_06.png" alt="translation_06" style="width:50%;">]
 
 
 
@@ -491,7 +491,7 @@ In the following a quick reminder... (we have done this before).
 
 Return the minimum distance to the two surfaces you wish to combine:
 
-.center[<img src="../img/csg_01.png" alt="csg_01" style="width:40%;">]
+.center[<img src="./img/csg_01.png" alt="csg_01" style="width:40%;">]
 
 .footnote[[[scratchapixel]](https://www.scratchapixel.com/lessons/advanced-rendering/rendering-distance-fields/constructive-solid-geometry-blends-deformers)]
 
@@ -552,7 +552,7 @@ The gravity of the "blending" can be adjusted by the variable k in the function 
 
 
 
-.right-even[<img src="../img/csg_02.png" alt="csg_02" style="width:95%;">]
+.right-even[<img src="./img/csg_02.png" alt="csg_02" style="width:95%;">]
 
 
 
@@ -574,7 +574,7 @@ Return the largest distance:
 .footnote[[[scratchapixel]](https://www.scratchapixel.com/lessons/advanced-rendering/rendering-distance-fields/constructive-solid-geometry-blends-deformers)]
 ]
 
-.right-even[<img src="../img/csg_03.png" alt="csg_03" style="width:95%;">]
+.right-even[<img src="./img/csg_03.png" alt="csg_03" style="width:95%;">]
 
 
 
@@ -622,7 +622,7 @@ You are not limited to two objects.
 .footnote[[[kindpng]](https://www.kindpng.com/imgv/TbTmTmT_images-csg-tree-constructive-solid-geometry-png-transparent/)]
 ]
 
-.right-quarter[<img src="../img/csg_07.png" alt="csg_07" style="width:100%;">]
+.right-quarter[<img src="./img/csg_07.png" alt="csg_07" style="width:100%;">]
 
 
 ???
@@ -636,7 +636,7 @@ You are not limited to two objects.
 
 ## CSG Trees
 
-.center[<img src="../img/csg_09.png" alt="csg_09" style="width:45%;">]
+.center[<img src="./img/csg_09.png" alt="csg_09" style="width:45%;">]
 
 ---
 .header[Constructive Solid Geometry]
@@ -644,7 +644,7 @@ You are not limited to two objects.
 ## CSG Trees
 
 
-.center[<img src="../img/csg_10.jpg" alt="csg_10" style="width:54%;">  
+.center[<img src="./img/csg_10.jpg" alt="csg_10" style="width:54%;">  
 [[Inigo Quilez - Menger Fractal]](https://iquilezles.org/articles/menger/)]  
 
 ---
@@ -653,7 +653,7 @@ You are not limited to two objects.
 ## CSG Trees
 
 
-.center[<img src="../img/csg_11.png" alt="csg_11" style="width:38%;">  
+.center[<img src="./img/csg_11.png" alt="csg_11" style="width:38%;">  
 [[Painting with Math: A Gentle Study of Raymarching]](https://blog.maximeheckel.com/posts/painting-with-math-a-gentle-study-of-raymarching/)]  
 
 
@@ -732,7 +732,7 @@ With *function design* we can obtain various effects:
 * Twists ([1](https://www.shadertoy.com/view/MlcGRf), [2](https://www.shadertoy.com/view/4tc3WB), [3](https://www.shadertoy.com/view/4ts3WN), [4](https://www.shadertoy.com/view/4dX3Rn), [5](https://www.shadertoy.com/view/4lGyW1))
 ]
 
-.right-even[<img src="../img/twisting_01.png" alt="twisting_01" style="width:100%;">  .imgref[[[tdhooper]](https://www.shadertoy.com/view/Mtc3RX)]]
+.right-even[<img src="./img/twisting_01.png" alt="twisting_01" style="width:100%;">  .imgref[[[tdhooper]](https://www.shadertoy.com/view/Mtc3RX)]]
 
 ---
 template:inverse
@@ -886,7 +886,7 @@ Rotate the view direction in 2D with:
 
 --
 
-.center[<img src="../img/2d_rotation_01.png" alt="2d_rotation_01" style="width:40%;">]
+.center[<img src="./img/2d_rotation_01.png" alt="2d_rotation_01" style="width:40%;">]
 
 --
 
@@ -938,7 +938,7 @@ The human perception of brightness luminance follows an approximate power functi
 
 --
 
-.left-even[<img src="../img/gamma_correction_04.png" alt="gamma_correction_04" style="width:70%;">]
+.left-even[<img src="./img/gamma_correction_04.png" alt="gamma_correction_04" style="width:70%;">]
 
 
 
@@ -1002,7 +1002,7 @@ Gamma correction is the act of undoing the monitor's scaling.
 
 ## Gamma Correction
 
-.center[<img src="../img/gamma_correction_03.png" alt="gamma_correction_03" style="width:45%;">]
+.center[<img src="./img/gamma_correction_03.png" alt="gamma_correction_03" style="width:45%;">]
 
 .footnote[[[tutsplus]](https://gamedevelopment.tutsplus.com/articles/gamma-correction-and-why-it-matters--gamedev-14466)]
 
@@ -1052,7 +1052,7 @@ template:inverse
 ---
 ## Aliasing
 
-.center[<img src="../img/antialiasing_01a.png" alt="antialiasing_01a" style="width:50%;">  .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
+.center[<img src="./img/antialiasing_01a.png" alt="antialiasing_01a" style="width:50%;">  .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
 
 ???
 .task[COMMENT:]  
@@ -1062,7 +1062,7 @@ template:inverse
 ---
 ## Aliasing
 
-.center[<img src="../img/antialiasing_04.png" alt="antialiasing_04" style="width:80%;"> .imgref[[[matthews]](https://www.matthews.sites.wfu.edu/misc/DigPhotog/alias/)]]
+.center[<img src="./img/antialiasing_04.png" alt="antialiasing_04" style="width:80%;"> .imgref[[[matthews]](https://www.matthews.sites.wfu.edu/misc/DigPhotog/alias/)]]
 
 ???
 .task[COMMENT:]  
@@ -1072,7 +1072,7 @@ template:inverse
 ---
 ## Aliasing
 
-.center[<img src="../img/antialiasing_02.png" alt="antialiasing_02" style="width:38%;"> .imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/procedural-texturing)]]
+.center[<img src="./img/antialiasing_02.png" alt="antialiasing_02" style="width:38%;"> .imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/procedural-texturing)]]
 
 
 ???
@@ -1084,7 +1084,7 @@ template:inverse
 ---
 ## Aliasing
 
-.center[<img src="../img/antialiasing_03.png" alt="antialiasing_03" style="width:78%;"> .imgref[[[matthews]](https://www.matthews.sites.wfu.edu/misc/DigPhotog/alias/)]]
+.center[<img src="./img/antialiasing_03.png" alt="antialiasing_03" style="width:78%;"> .imgref[[[matthews]](https://www.matthews.sites.wfu.edu/misc/DigPhotog/alias/)]]
 
 
 ???
@@ -1118,12 +1118,12 @@ Anti-aliasing removes signal components that have a higher frequency than the sa
 
 --
 
-.center[<img src="../img/antialiasing_01b.png" alt="antialiasing_01b" style="width:80%;"> .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
+.center[<img src="./img/antialiasing_01b.png" alt="antialiasing_01b" style="width:80%;"> .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
 
 ---
 ## Anti-Aliasing
 
-.center[<img src="../img/antialiasing_05.png" alt="antialiasing_05" style="width:65%;"> .imgref[[[dhanalakshmisps]](https://dhanalakshmisps.blogspot.com/2016/08/aliasing-aliasing-is-g-eneration-of.html)]]
+.center[<img src="./img/antialiasing_05.png" alt="antialiasing_05" style="width:65%;"> .imgref[[[dhanalakshmisps]](https://dhanalakshmisps.blogspot.com/2016/08/aliasing-aliasing-is-g-eneration-of.html)]]
 
 ---
 ## Anti-Aliasing
@@ -1163,7 +1163,7 @@ Appropriate algorithms can also be found as *filtering* and *band-limiting* tech
 How much anti-aliasing you need, depends on the scene:
 
 
-.center[<img src="../img/antialiasing_01c.png" alt="antialiasing_01c" style="width:100%;"> .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
+.center[<img src="./img/antialiasing_01c.png" alt="antialiasing_01c" style="width:100%;"> .imgref[[[bohemiantruckstop]](http://bohemiantruckstop.blogspot.com/2008/12/what-is-anti-aliasing.html)]]
 
 
 ???
@@ -1226,7 +1226,7 @@ A bit more elegantly and controllable: [Raymarching - Primitives](https://www.sh
 ---
 ## More Examples
 
-.center[<video autoplay loop width="580"><source src="../img/preview_05.webm"type="video/webm"></video>]
+.center[<video autoplay loop width="580"><source src="./img/preview_05.webm"type="video/webm"></video>]
 
 ---
 template:inverse

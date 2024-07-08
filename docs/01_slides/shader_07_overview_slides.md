@@ -95,23 +95,23 @@ Rendering a 3D scene in in a fragment shader
 ---
 ## Re-Cap
 
-.center[<img src="../img/preview_01.png" alt="preview_01" style="width:45%;">]
+.center[<img src="./img/preview_01.png" alt="preview_01" style="width:45%;">]
 
 ---
 ## Preview
 
-.center[<video autoplay loop width="500"><source src="../img/preview_02.webm"type="video/webm"></video>]
+.center[<video autoplay loop width="500"><source src="./img/preview_02.webm"type="video/webm"></video>]
 
 ???
 .task[COMMENT:]  
 
 
-.center[<img src="../img/preview_03.png" alt="preview_03" style="width:66%;">]
+.center[<img src="img/preview_03.png" alt="preview_03" style="width:66%;">]
 
 ---
 ## Preview
 
-.center[<video autoplay loop width="500"><source src="../img/preview_04.webm"type="video/webm"></video>]
+.center[<video autoplay loop width="500"><source src="img/preview_04.webm"type="video/webm"></video>]
 
 
 ???
@@ -119,7 +119,7 @@ Rendering a 3D scene in in a fragment shader
 
 * Show three.js example
 
-.center[<video autoplay loop width="500"><source src="../img/preview_05.webm"type="video/webm"></video>]
+.center[<video autoplay loop width="500"><source src="img/preview_05.webm"type="video/webm"></video>]
 
 ---
 layout: false

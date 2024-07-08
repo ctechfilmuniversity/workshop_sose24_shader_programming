@@ -19,7 +19,7 @@ layout:false
 
 ## Simple Shading
 
-.center[<img src="../img/shading.png" alt="shading" style="width:66%;">]
+.center[<img src="./img/shading.png" alt="shading" style="width:66%;">]
 
 
 ???
@@ -45,7 +45,7 @@ Hence, we need the *normal* of a point on a surface.
 
 --
 
-.center[<img src="../img/normal_01.png" alt="normal_01" style="width:94%;">.imgref[[[wiki]](https://www.wikiwand.com/en/Normal_(geometry)]]
+.center[<img src="./img/normal_01.png" alt="normal_01" style="width:94%;">.imgref[[[wiki]](https://www.wikiwand.com/en/Normal_(geometry)]]
 
 ---
 .header[Implicit Surfaces]
@@ -54,7 +54,7 @@ Hence, we need the *normal* of a point on a surface.
 
 But we have...
 
-.center[<img src="../img/implicit_geometry_02.png" alt="implicit_geometry_02" style="width:40%;">]
+.center[<img src="./img/implicit_geometry_02.png" alt="implicit_geometry_02" style="width:40%;">]
 
 ---
 .header[Implicit Surfaces]
@@ -78,7 +78,7 @@ The gradient vector can be interpreted as the *direction and rate of the fastest
 
 --
 
-.center[<img src="../img/gradient_03.png" alt="gradient_03" style="width:80%;">]
+.center[<img src="./img/gradient_03.png" alt="gradient_03" style="width:80%;">]
 
 .footnote[[[Wiki]](https://www.wikiwand.com/en/Gradient)]
 
@@ -152,8 +152,8 @@ $n = normalize(\nabla f(p))$
 
 ## Normals
 
-.left-even[<img src="../img/gradient_02.png" alt="gradient_02" style="width:80%;">]
-.right-even[<img src="../img/gradient_01.png" alt="gradient_01" style="width:90%;">]
+.left-even[<img src="./img/gradient_02.png" alt="gradient_02" style="width:80%;">]
+.right-even[<img src="./img/gradient_01.png" alt="gradient_01" style="width:90%;">]
 
 .footnote[[[Wiki](https://www.wikiwand.com/en/Gradient), [Scratchapixel](https://www.scratchapixel.com/lessons/advanced-rendering/rendering-distance-fields/basic-sphere-tracer)]]
 
@@ -217,7 +217,7 @@ The result gives us the slope of the tangent at P along the x-axis.
 ]
 
 .right-even[
-<img src="../img/gradient_04.png" alt="gradient_04" style="width:95%;">
+<img src="./img/gradient_04.png" alt="gradient_04" style="width:95%;">
 ]
 
 
@@ -246,7 +246,7 @@ We then combine the results to form the three-dimensional gradient vector.
 
 ## Normals
 
-<img src="../img/gradient_05.png" alt="gradient_05" style="width:40%;">
+<img src="./img/gradient_05.png" alt="gradient_05" style="width:40%;">
 
 .footnote[[[scratchapixel]](https://www.scratchapixel.com/lessons/advanced-rendering/rendering-distance-fields/basic-sphere-tracer)]
 
@@ -263,7 +263,7 @@ For the implementation we can discard the normalization with the division by 2h 
 
 --
 
-<img src="../img/gradient_06.png" alt="gradient_06" style="width:80%;">
+<img src="./img/gradient_06.png" alt="gradient_06" style="width:80%;">
 
 --
 
@@ -333,7 +333,7 @@ Now that we have the normals, and with that can compute how a surface is e.g. or
 
 ## Simple Shading
 
-.center[<img src="../img/tracing_00.png" alt="tracing_00" style="width:45%;">]
+.center[<img src="./img/tracing_00.png" alt="tracing_00" style="width:45%;">]
 
 .footnote[[[based on: scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/rendering-3d-scene-overview/3d-rendering-overview)]
 
@@ -347,14 +347,14 @@ Now that we have the normals, and with that can compute how a surface is e.g. or
 
 ## How Much Light Reaches The Camera?
 
-.center[<img src="../img/shading_01.png" alt="shading_01" style="width:60%;">]
+.center[<img src="./img/shading_01.png" alt="shading_01" style="width:60%;">]
 
 ---
 .header[Sphere Tracing | Simple Shading]
 
 ### How Much Do We Need To Adjust The Brightness?
 
-.center[<img src="../img/shading_02.png" alt="shading_02" style="width:60%;">]
+.center[<img src="./img/shading_02.png" alt="shading_02" style="width:60%;">]
 
 
 ---
@@ -388,7 +388,7 @@ A diffuse reflection looks the same under all observation directions.
 
 --
 
-<img src="../img/reflection_diffuse.png" alt="reflection_diffuse" style="width:100%;">
+<img src="./img/reflection_diffuse.png" alt="reflection_diffuse" style="width:100%;">
 
 --
 
@@ -400,7 +400,7 @@ It only depends on the light direction.
 
 In comparison a shiny reflection:
 
-.center[<img src="../img/reflection_shiny.png" alt="reflection_shiny" style="width:100%;">]
+.center[<img src="./img/reflection_shiny.png" alt="reflection_shiny" style="width:100%;">]
 
 --
 
@@ -412,7 +412,7 @@ We will come back to this in the Materials & Shading workshop!
 
 A diffuse reflection looks the same under all observation directions. 
 
-<img src="../img/reflection_diffuse.png" alt="reflection_diffuse" style="width:100%;">
+<img src="./img/reflection_diffuse.png" alt="reflection_diffuse" style="width:100%;">
 
 **It only depends on the light direction.**
 
@@ -422,21 +422,21 @@ A diffuse reflection looks the same under all observation directions.
 
 ## Light Direction
 
-<img src="../img/lambert_01a.png" alt="lambert_01a" style="width:100%;">
+<img src="./img/lambert_01a.png" alt="lambert_01a" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
 
 ## Light Direction
 
-<img src="../img/lambert_01b.png" alt="lambert_01b" style="width:100%;">
+<img src="./img/lambert_01b.png" alt="lambert_01b" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
 
 ## Light Direction
 
-<img src="../img/lambert_01.png" alt="lambert_01" style="width:80%;">
+<img src="./img/lambert_01.png" alt="lambert_01" style="width:80%;">
 
 As the angle between the normal vector and the light direction increases, the surface area illuminated by the beam of light (which stays the same) increases...
 
@@ -455,7 +455,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 --
 
-<img src="../img/coslaw_00.png" alt="coslaw_00" style="width:100%;">
+<img src="./img/coslaw_00.png" alt="coslaw_00" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
@@ -465,7 +465,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 This means that depending on the angle between light and normal, we want to multiply the light intensity with a factor.
 
-<img src="../img/coslaw_01.png" alt="coslaw_01" style="width:100%;">
+<img src="./img/coslaw_01.png" alt="coslaw_01" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
@@ -475,7 +475,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 This means that depending on the angle between light and normal, we want to multiply the light intensity with a factor.
 
-<img src="../img/coslaw_02.png" alt="coslaw_02" style="width:100%;">
+<img src="./img/coslaw_02.png" alt="coslaw_02" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
@@ -485,7 +485,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 This means that depending on the angle between light and normal, we want to multiply the light intensity with a factor.
 
-<img src="../img/coslaw_03.png" alt="coslaw_03" style="width:100%;">
+<img src="./img/coslaw_03.png" alt="coslaw_03" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
@@ -495,7 +495,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 This means that depending on the angle between light and normal, we want to multiply the light intensity with a factor.
 
-<img src="../img/coslaw_04.png" alt="coslaw_04" style="width:100%;">
+<img src="./img/coslaw_04.png" alt="coslaw_04" style="width:100%;">
 
 ---
 .header[Diffuse Reflection]
@@ -505,7 +505,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 This means that depending on the angle between light and normal, we want to multiply the light intensity with a factor.
 
-<img src="../img/coslaw_04.png" alt="coslaw_04" style="width:88%;">
+<img src="./img/coslaw_04.png" alt="coslaw_04" style="width:88%;">
 
 
 > Cosine to the rescue!
@@ -518,7 +518,7 @@ This means that depending on the angle between light and normal, we want to mult
 
 ${cosθ}$: 
 
-.center[<img src="../img/coslaw_05.png" alt="coslaw_05" style="width:50%;">]
+.center[<img src="./img/coslaw_05.png" alt="coslaw_05" style="width:50%;">]
 
 ---
 .header[Diffuse Reflection]
@@ -527,7 +527,7 @@ ${cosθ}$:
 
 ${cosθ}$: 
 
-.center[<img src="../img/dot_product_cut.png" alt="dot_product_cut" style="width:60%;">]
+.center[<img src="./img/dot_product_cut.png" alt="dot_product_cut" style="width:60%;">]
 
 
 .footnote[[[Unity Manual]](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)]
@@ -541,7 +541,7 @@ ${cosθ}$:
 We need to decrease in the intensity of the light by a factor of ${cosθ}$
   
 --
-.center[<img src="../img/coslaw_04.png" alt="coslaw_04" style="width:100%;">]
+.center[<img src="./img/coslaw_04.png" alt="coslaw_04" style="width:100%;">]
 
 
 ---
@@ -568,7 +568,7 @@ ${cosθ} = L ∙ N$
 ]
 --
 
-.right-even[<img src="../img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
+.right-even[<img src="./img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
 
 
 ???
@@ -589,7 +589,7 @@ ${cosθ} = L ∙ N$
 The factor should be zero...
 ]
 
-.right-even[<img src="../img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
+.right-even[<img src="./img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
 
 
 ???
@@ -610,7 +610,7 @@ The factor should be zero...
 The factor should be zero and should not be illuminated at all. 
 ]
 
-.right-even[<img src="../img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
+.right-even[<img src="./img/lambert_03.png" alt="lambert_03" style="width:60%;">]  
 
 
 ???
@@ -626,7 +626,7 @@ The factor should be zero and should not be illuminated at all.
 
 
 
-.right-even[<img src="../img/dot_product.png" alt="dot_product" style="width:70%;">]
+.right-even[<img src="./img/dot_product.png" alt="dot_product" style="width:70%;">]
 
 .footnote[[[Unity Manual]](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)]
 
@@ -644,7 +644,7 @@ Lucky Us!
 The dot product becomes negative when the surface is facing away from the light source.
 ]
 
-.right-even[<img src="../img/dot_product.png" alt="dot_product" style="width:70%;">]  
+.right-even[<img src="./img/dot_product.png" alt="dot_product" style="width:70%;">]  
 
 .footnote[[[Unity Manual]](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)]
 
@@ -667,7 +667,7 @@ $max(L ∙ N, 0)$
 
 --
 
-.center[<img src="../img/dot_product_02.png" alt="dot_product_02" style="width:60%;">]
+.center[<img src="./img/dot_product_02.png" alt="dot_product_02" style="width:60%;">]
 
 ---
 .header[Diffuse Reflection | Light Direction]
@@ -717,7 +717,7 @@ vec3 light_direction_to_point = normalize(light_position - point_on_surface);
 
 --
 
-.center[<img src="../img/coslaw_05.png" alt="coslaw_05" style="width:30%;">]
+.center[<img src="./img/coslaw_05.png" alt="coslaw_05" style="width:30%;">]
 
 ---
 .header[Simple Shading]
@@ -804,14 +804,14 @@ We need to check if there is an object between the point we are shading and the 
 
 ## Shadows
 
-.center[<img src="../img/lightingnoshadow.gif" alt="lightingnoshadow" style="width:50%;">.imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm)]]
+.center[<img src="./img/lightingnoshadow.gif" alt="lightingnoshadow" style="width:50%;">.imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm)]]
 
 ---
 .header[Simple Shading]
 
 ## Shadows
 
-.center[<img src="../img/lightingshadow.gif" alt="lightingshadow" style="width:50%;">.imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm)]]
+.center[<img src="./img/lightingshadow.gif" alt="lightingshadow" style="width:50%;">.imgref[[[scratchapixel]](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm)]]
 
 
 ---
@@ -873,6 +873,6 @@ template:inverse
 ---
 ## Exercise
 
-1. Follow the steps in [spheretracing_03_diffuse_shading_steps.md](../02_code/fragmentshader/spheretracing_02_diffuse_shading_steps.md) to implement diffuse shading in the scene.
+1. Follow the steps in [spheretracing_03_diffuse_shading_steps.md](./02_code/fragmentshader/spheretracing_02_diffuse_shading_steps.md) to implement diffuse shading in the scene.
 2. Explore!
 
