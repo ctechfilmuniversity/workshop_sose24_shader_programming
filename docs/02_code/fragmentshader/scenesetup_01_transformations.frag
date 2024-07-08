@@ -133,12 +133,12 @@ float sdfScene(vec3 point_on_ray)
 
 
     // Twisting
-    // float k =  sin(u_time) * 3.0; 
-    // float c = cos(k * point_on_ray.y);
-    // float s = sin(k * point_on_ray.y);
-    // mat2  m = mat2(c, -s, s, c);
-    // vec3  q = vec3(m * (point_on_ray.xz - vec2(2.5,0.2)), point_on_ray.y);
-    // distance_to_scene = min(distance_to_scene, sdfRectangle(q, vec3(0.6)));
+    float k =  sin(u_time) * 3.0; 
+    float c = cos(k * point_on_ray.y);
+    float s = sin(k * point_on_ray.y);
+    mat2  m = mat2(c, -s, s, c);
+    vec3  q = vec3(m * (point_on_ray.xz - vec2(.5,0.2)), point_on_ray.y);
+    distance_to_scene = min(distance_to_scene, sdfRectangle(q, vec3(0.6)));
 
 
     return distance_to_scene;

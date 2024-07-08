@@ -79,7 +79,7 @@ For working with the code, today we simply use [glsl-canvas](https://marketplace
 1. Transformations: [md](./fragmentshader/scenesetup_01_transformations.md), [code](./fragmentshader/scenesetup_01_transformations.frag)
 2. Constructive Solid Geometry: [md](./fragmentshader/scenesetup_02_csg.md), [code](./fragmentshader/scenesetup_02_csg.frag)
     *  Super Sampling: [code](./fragmentshader/scenesetup_02_csg_supersampling.frag)
-3. Repetition: [steps](./fragmentshader/scenesetup_03_repetition.md), [code solution](./fragmentshader/scenesetup_03_repetition.frag)
+3. Repetition: [steps](./fragmentshader/scenesetup_03_repetition_steps.md), [code solution](./fragmentshader/scenesetup_03_repetition.frag)
 4. Heart: [md](./fragmentshader/scenesetup_04_heart.md), [code](./fragmentshader/scenesetup_04_heart.frag)
 5. Biomine: [md](./fragmentshader/scenesetup_05_biomine.md), [code](./fragmentshader/scenesetup_05_biomine.frag)
 
